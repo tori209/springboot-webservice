@@ -1,11 +1,13 @@
 package com.hackerspace2024.webservice.domain.posts;
 
 import com.hackerspace2024.webservice.domain.BaseTimeEntity;
-import jakarta.persistence.*;
+import javax.persistence.*;
 import lombok.AccessLevel;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
+
+import javax.persistence.Entity;
 
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
 @Getter
