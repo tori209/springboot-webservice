@@ -4,6 +4,7 @@ import org.hamcrest.CoreMatchers;
 import org.junit.After;
 import org.junit.Test;
 import org.junit.Assert;
+import org.junit.jupiter.api.Assertions;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -58,7 +59,7 @@ public class PostsRepositoryTest {
 
         //then
         Posts posts = postsList.get(0);
-        Assert.assertTrue(posts.getCreateDate().isAfter(now));
-        Assert.assertTrue(posts.getModifiedDate().isAfter(now));
+        Assertions.assertTrue(posts.getCreateDate().isAfter(now));
+        Assertions.assertTrue(posts.getModifiedDate().isAfter(now));
     }
 }

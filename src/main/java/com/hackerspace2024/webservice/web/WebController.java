@@ -10,7 +10,6 @@ public class WebController {
 
     @GetMapping("/")
     public String mainDo() {
-        System.out.print("test");
         return "main";
     }
 }
