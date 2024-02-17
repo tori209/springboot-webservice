@@ -27,7 +27,8 @@ var main = {
         else {
             var form = new FormData();
             form.set("files", file);
-            form.set("post", JSON.stringify(baseData));
+            form.set("post", baseData);
+            Object.keys(baseData).forEach(key => form.set(key, baseData[key]));
             ajaxOption.contentType = false;
             ajaxOption.processData = false;
             ajaxOption.data = form;
