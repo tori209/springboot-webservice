@@ -22,6 +22,7 @@ public class FileDto {
                 .realName(realName)
                 .savedName(savedName)
                 .savedPath(savedPath)
+                .relatedPostId(relatedPostId)
                 .build();
     }
 

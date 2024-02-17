@@ -12,7 +12,7 @@ async function findAllFilesById() {
 
     let htmlFileList = "";
     response.forEach(row => {
-        htmlFileList += `<a class="list-group-item list-group-item-action"> ${row.realName} </a>`
+        htmlFileList += `<a href="/download/${row.id}" class="list-group-item list-group-item-action"> ${row.realName} </a>`
     })
     htmlFileList = `<div class="list-group">` + htmlFileList + `</div>`;
     document.getElementById("file-container").innerHTML = htmlFileList;
