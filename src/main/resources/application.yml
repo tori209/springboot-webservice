@@ -1,7 +1,24 @@
 spring:
-  h2:
-    console:
-      enabled: true
+  profiles:
+    active: local
+
+---
+spring:
+  config:
+    activate:
+      on-profile: local
   datasource:
     driver-class-name: org.h2.Driver
     url: jdbc:h2:mem:testdb;DB_CLOSE_ON_EXIT=FALSE
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: create-drop
+    defer-datasource-initialization: true
+  sql:
+    init:
+      mode: always
+      data-locations: classpath:data-h2.sql
+  h2:
+    console:
+      enabled: true
